@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Union Academy Dhule</title>
+    <link rel="icon" type="image/png" href="img/Union_Logo.png">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<script>
+    function sendMail() {
+
+        let Name = document.getElementById("c_name").value;
+        let Email = document.getElementById("c_email").value;
+        let Phone = document.getElementById("c_phone").value;
+        let Msg = document.getElementById("c_msg").value;
+        let Sub = document.getElementById("c_sub").value;
+
+        axios.post('http://localhost:5000/posts_c', {
+            email: Email,
+            name: Name,
+            msg: Msg,
+            phone: Phone,
+            Subj: Sub
+        })
+            .then((response) => {
+                window.alert('Email Send Successfully');
+            }, (error) => {
+                window.alert('Error Occure : Could not send mail');
+            });
+    }
+
+</script>
+
+
+
+<body>
+    <!-- Start Your Body Code From here -->
+    <div class="wrapper">
+
+
+        <!-- header starts here -->
+        <header id="header" class="">
+
+            <!-- header Logo starts here -->
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div>
+                        <div class="logo-name">
+                            <div class="logo"><a href="index.html" title=""><img src="img/Union_Logo.png" alt="logo"
+                                        height="40px" width="40px"></a></div>
+                            <div class="name">
+                                <a href="index.html" title="">
+                                    <h5>UNION ACADEMY</h5>
+                                    <h5 class="primary-color">Dhule</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-links">
+                        <a href="#" data-toggle="popover" title="Address"
+                            data-content="01, Prbhat nagar, D.C. College Road, Deopur, Dhule, Maharashtra"
+                            data-placement="bottom"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
+
+                        <a href="#" data-toggle="popover" title="Phone No." data-content="+91-8010731455"
+                            data-placement="bottom"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></a>
+
+                        <a href="#" data-toggle="popover" title="Email" data-content="unionacademy592@gmail.com"
+                            data-placement="bottom"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- header Logo ends here -->
+
+
+            <!--Navbar-->
+            <div class="navbar">
+                <div class="contaier">
+
+                    <div class="navbar-header">
+                        <button class="toggle">
+                            <!--dropdown menu button-->
+                            <span></span>
+                            <!--For three lines of dropdown menu -->
+                            <span></span>
+                            <span></span>
+                        </button>
+
+
+                        <div class="navbox">
+
+                            <ul class="nav navcollaps">
+                                <!--dropdown nav ul -->
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="batches.html">BATCHES</a></li>
+                                <li><a href="gallery.html">GALLERY</a></li>
+                                <li><a href="achivements.html">ACHIVEMENTS</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="faculty.html">FACULTY</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                                <li><a href="regester.html">REGESTRATION</a></li>
+                            </ul>
+
+                        </div>
+
+                    </div><!-- navbar-header -->
+                </div><!-- contaier -->
+            </div>
+            <!-- navbar end -->
+
+        </header>
+        <!-- header Ends here -->
+
+        <!-- Content wrapper -->
+        <div class="contact_contents-wrapper">
+            <!--Name changed here -->
+            <!-- Contents starts here -->
+            <div class="content">
+
+
+
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14907.103638397277!2d74.7830472!3d20.9213335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa715ec768fb09b84!2sUnion%20Academy!5e0!3m2!1sen!2sin!4v1650117534294!5m2!1sen!2sin" 
+                style="border:0; width:100%; height:300px;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+                <div class="breadcrumb-row">
+                    <div class="contact_container">
+                        <ul class="list-inline">
+                            <li><a href="index.html">Home</a></li>
+                            <li>/ Contact us</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="section-full content-inner bg-white contact-style-1">
+                    <div class="container">
+
+                        <div class="contact_row">
+                            <!-- right part start -->
+                            <div class="col-md-4">
+                                <div class="p-a30 m-b30 border contact-area border-1">
+                                    <h2 class="m-b10">Quick Contact</h2>
+                                    <p>If you have any questions simply use the following contact details.</p>
+                                    <ul class="no-margin">
+                                        <li class="icon-bx-wraper left m-b30">
+                                            <div class="icon-bx-xs border-1"> <a href="#" class="icon-cell"><i
+                                                        class="fa fa-map-marker"></i></a> </div>
+                                            <div class="icon-content">
+                                                <h6 class="text-uppercase m-b0 w3-tilte">Address:</h6>
+                                                <p> Plot no.01 ,Prabhat Nagar, DC College, Road, Deopur, Dhule </p>
+                                            </div>
+                                        </li>
+                                        <li class="icon-bx-wraper left  m-b30">
+                                            <div class="icon-bx-xs border-1"> <a href="#" class="icon-cell"><i
+                                                        class="fa fa-envelope"></i></a> </div>
+                                            <div class="icon-content">
+                                                <h6 class="text-uppercase m-b0 w3-tilte">Email:</h6>
+                                                <p>unionacademy592@gmail.com</p>
+                                            </div>
+                                        </li>
+                                        <li class="icon-bx-wraper left">
+                                            <div class="icon-bx-xs border-1"> <a href="#" class="icon-cell"><i
+                                                        class="fa fa-phone"></i></a> </div>
+                                            <div class="icon-content">
+                                                <h6 class="text-uppercase m-b0 w3-tilte">PHONE</h6>
+                                                <p>+91 8010731455</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- right part END -->
+                            <!-- Left part start -->
+                            <div class="col-md-8">
+                                <div class="p-a30 bg-gray clearfix m-b30 ">
+                                    <h2>Send Message</h2>
+                                    <div class="dzFormMsg"></div>
+
+
+                                    <input type="hidden" name="_token" value="ERPzRZXhrzdzscIYndz6nvimRresIjcMlaToPiER">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="dzName" id="c_name" type="text" required=""
+                                                        class="form-control" placeholder="Your Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="dzEmail" id="c_email" type="email" class="form-control"
+                                                        required="" placeholder="Your Email Id">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="phone" type="text" id="c_phone" required=""
+                                                        class="form-control" placeholder="Phone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="subject" id="c_sub" type="text" required=""
+                                                        class="form-control" placeholder="Subject">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="dzMessage" rows="4" id="c_msg" class="form-control"
+                                                        required="" placeholder="Your Message...">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <input name="submit" type="button" value="Submit" onclick="sendMail()"
+                                                class="site-button ">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Left part END -->
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer Starts -->
+        <footer class="site-footer" style="display: block; height: 264px;">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Logo and socail media  -->
+                        <div class="col-md-3 col-sm-6 footer-col-4">
+                            <div class="widget widget_about">
+
+                                <!-- Logo  -->
+                                <div class="logo-footer"><img style="border-radius:10%" src="img/Footer_Union_Logo.png"
+                                        height="100" alt="UNION ACADEMY">
+                                </div>
+
+                                <p class="m-tb20"><strong>Union Academy</strong> </p>
+
+                                <!-- Social Media  -->
+                                <div class="row container d-flex justify-content-center">
+                                    <div class="col-md-3 grid-margin stretch-card">
+
+                                        <div class="template-demo">
+
+                                            <!-- Facebook -->
+                                            <a href="http://surl.li/budlg" target="_blank">
+                                                <button type="button" class="btn btn-social-icon btn-facebook">
+                                                    <i class="fa fa-facebook"> </i>
+                                                </button>
+                                            </a>
+
+                                            <!-- Youtube  -->
+                                            <a href="http://surl.li/budls" target="_blank">
+                                                <button type="button" class="btn btn-social-icon btn-youtube">
+                                                    <i class="fa fa-youtube"> </i>
+                                                </button>
+                                            </a>
+
+                                            <!-- Instagram -->
+                                            <a href="http://surl.li/budlg" target="_blank">
+                                                <button type="button" class="btn btn-social-icon btn-instagram">
+                                                    <i class="fa fa-instagram"> </i>
+                                                </button>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Logo and socail media end -->
+
+                        <!-- Contact us -->
+                        <div class="col-md-3 col-sm-6 footer-col-4">
+                            <div class="widget widget_getintuch">
+                                <h4 class="m-b15 text-uppercase">Contact us</h4>
+                                <div class="w3-separator bg-primary"></div>
+                                <ul>
+                                    <li><i class="fa fa-map-marker"></i><strong>address</strong> Plot no.01 ,Prabhat
+                                        Nagar, DC College, Road, Deopur, Dhule </li>
+                                    <li><i class="fa fa-phone"></i><strong>phone</strong>8010731455</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer top end -->
+
+
+            <!-- footer bottom part -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-left"> <span>© Copyright 2022 Union Academy by Union Academy ltd
+                            </span> </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- footer end -->
+
+
+    </div>
+    <!-- Wrapper end -->
+
+
+
+    <!-- Scripts for nav bar collapse -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.paginate.min.js "></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

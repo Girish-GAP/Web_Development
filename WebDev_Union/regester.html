@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Union Academy Dhule</title>
+    <link rel="icon" type="image/png" href="img/Union_Logo.png">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<script>
+
+    function sendMail() {
+
+        let Name = document.getElementById("r_name").value;
+        let Email = document.getElementById("r_email").value;
+        let Phone = document.getElementById("r_phone").value;
+        let Clg = document.getElementById("r_clg").value;
+        let Batch = document.getElementById("r_Batch").value;
+
+
+        axios.post('http://localhost:5000/posts_r', {
+            email: Email,
+            name: Name,
+            phone: Phone,
+            clg: Clg,
+            batch: Batch
+        })
+            .then((response) => {
+                window.alert('Emails Send Successfully');
+            }, (error) => {
+                window.alert('Error Occure : Could not send mail');
+            });
+    }
+
+</script>
+
+
+
+<body>
+    <!-- Start Your Body Code From here -->
+    <div class="wrapper">
+
+
+        <!-- header starts here -->
+        <header id="header" class="">
+
+            <!-- header Logo starts here -->
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div>
+                        <div class="logo-name">
+                            <div class="logo"><a href="index.html" title=""><img src="img/Union_Logo.png" alt="logo"
+                                        height="40px" width="40px"></a></div>
+                            <div class="name">
+                                <a href="index.html" title="">
+                                    <h5>UNION ACADEMY</h5>
+                                    <h5 class="primary-color">Dhule</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-links">
+                        <a href="#" data-toggle="popover" title="Address"
+                            data-content="01, Prbhat nagar, D.C. College Road, Deopur, Dhule, Maharashtra"
+                            data-placement="bottom"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
+
+                        <a href="#" data-toggle="popover" title="Phone No." data-content="+91-8010731455"
+                            data-placement="bottom"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></a>
+
+                        <a href="#" data-toggle="popover" title="Email" data-content="unionacademy592@gmail.com"
+                            data-placement="bottom"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- header Logo ends here -->
+
+
+            <!--Navbar-->
+            <div class="navbar">
+                <div class="contaier">
+
+                    <div class="navbar-header">
+                        <button class="toggle">
+                            <!--dropdown menu button-->
+                            <span></span>
+                            <!--For three lines of dropdown menu -->
+                            <span></span>
+                            <span></span>
+                        </button>
+
+
+                        <div class="navbox">
+
+                            <ul class="nav navcollaps">
+                                <!--dropdown nav ul -->
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="batches.html">BATCHES</a></li>
+                                <li><a href="gallery.html">GALLERY</a></li>
+                                <li><a href="achivements.html">ACHIVEMENTS</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="faculty.html">FACULTY</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                                <li><a href="regester.html">REGESTRATION</a></li>
+                            </ul>
+
+                        </div>
+
+                    </div><!-- navbar-header -->
+                </div><!-- contaier -->
+            </div>
+            <!-- navbar end -->
+
+        </header>
+        <!-- header Ends here -->
+
+
+
+
+        <!-- Content wrapper -->
+        <div class="contact_contents-wrapper">
+            <!--Name changed here -->
+
+            <!-- Contents starts here -->
+            <div class="content">
+
+                <div class="section-full content-inner bg-white contact-style-1">
+                    <div class="container">
+
+                        <div class="contact_row">
+
+                            <!-- Left part start -->    
+                            <div class="col-md-8-reg">
+                                <div class="p-a30 bg-gray clearfix m-b30 ">
+                                    <h2>Register</h2>
+                                    <div class="dzFormMsg"></div>
+
+
+                                    <input type="hidden" name="_token" value="ERPzRZXhrzdzscIYndz6nvimRresIjcMlaToPiER">
+                                    <div class="row">   
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="dzName" id="r_name" type="text" required=""
+                                                        class="form-control" placeholder="Your Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="dzEmail" id="r_email" type="email" class="form-control"
+                                                        required="" placeholder="Your Email Id">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="phone" type="text" id="r_phone" required=""
+                                                        class="form-control" placeholder="Phone">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <label for="Batch" style="font: size 15px;"> Batch : </label>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+
+                                                    <select id="r_Batch" name="batch">
+
+                                                        <option value="Mathematics">Mathematics</option>
+                                                        <option value="Science">Science</option>
+                                                        <option value="Programming Languages">Programming Languages
+                                                        </option>
+                                                        <option value="Civil Engineering">Civil Engineering</option>
+                                                        <option value="Computer Engineering">Computer Engineering
+                                                        </option>
+                                                        <option value="Mechanical Engineering">Mechanical Engineering
+                                                        </option>
+
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="dzcollege" rows="4" id="r_clg" class="form-control"
+                                                        required="" placeholder="College">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <input name="submit" type="button" value="Submit" onclick="sendMail()"
+                                                class="site-button ">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Left part END -->
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer Starts -->
+        <footer class="site-footer" style="display: block; height: 264px;">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Logo and socail media  -->
+                        <div class="col-md-3 col-sm-6 footer-col-4">
+                            <div class="widget widget_about">
+
+                                <!-- Logo  -->
+                                <div class="logo-footer"><img style="border-radius:10%" src="img/Footer_Union_Logo.png"
+                                        height="100" alt="UNION ACADEMY">
+                                </div>
+
+                                <p class="m-tb20"><strong>Union Academy</strong> </p>
+
+                                <!-- Social Media  -->
+                                <div class="row container d-flex justify-content-center">
+                                    <div class="col-md-3 grid-margin stretch-card">
+
+                                        <div class="template-demo">
+
+                                            <!-- Facebook -->
+                                            <a href="http://surl.li/budlg" target="_blank">
+                                                <button type="button" class="btn btn-social-icon btn-facebook">
+                                                    <i class="fa fa-facebook"> </i>
+                                                </button>
+                                            </a>
+
+                                            <!-- Youtube  -->
+                                            <a href="http://surl.li/budls" target="_blank">
+                                                <button type="button" class="btn btn-social-icon btn-youtube">
+                                                    <i class="fa fa-youtube"> </i>
+                                                </button>
+                                            </a>
+
+                                            <!-- Instagram -->
+                                            <a href="http://surl.li/budlg" target="_blank">
+                                                <button type="button" class="btn btn-social-icon btn-instagram">
+                                                    <i class="fa fa-instagram"> </i>
+                                                </button>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Logo and socail media end -->
+
+                        <!-- Contact us -->
+                        <div class="col-md-3 col-sm-6 footer-col-4">
+                            <div class="widget widget_getintuch">
+                                <h4 class="m-b15 text-uppercase">Contact us</h4>
+                                <div class="w3-separator bg-primary"></div>
+                                <ul>
+                                    <li><i class="fa fa-map-marker"></i><strong>address</strong> Plot no.01 ,Prabhat
+                                        Nagar, DC College, Road, Deopur, Dhule </li>
+                                    <li><i class="fa fa-phone"></i><strong>phone</strong>8010731455</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer top end -->
+
+
+            <!-- footer bottom part -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-left"> <span>© Copyright 2022 Union Academy by Union Academy ltd
+                            </span> </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- footer end -->
+
+
+    </div>
+    <!-- Wrapper end -->
+
+
+
+    <!-- Scripts for nav bar collapse -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.paginate.min.js "></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
